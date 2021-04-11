@@ -14,9 +14,11 @@ app.get('/Sobre', function (req, res) {
 
 
 app.get('/Confirmacao', function (req, res) {
-    console.log(req.query.NomeForm)
-    console.log(req.query.EmailForm)
-    console.log(req.query.MensagemForm)
+    let nome = req.query.NomeForm
+    let email = req.query.EmailForm
+    let mensagem = req.query.MensagemForm;
+
+    alert("Obrigado" + nome + "por ter enviado a mensagem " + mensagem + ", retornaremos no email" + email + ".")
 })
 
 app.listen(3000, function () {
